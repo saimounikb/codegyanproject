@@ -18,7 +18,7 @@ const Grid = ({ photos, onDelete }) => {
     console.log("handleConfirmDelete called");
     if (selectedPhotoId) {
       axios
-        .delete(`http://localhost:5000/api/delete/${selectedPhotoId}`)
+        .delete(`http://13.48.84.96:5000/api/delete/${selectedPhotoId}`)
         .then((response) => {
           console.log("Photo deleted:", response.data);
           // Update your UI or trigger a refresh of the photo grid
@@ -43,7 +43,7 @@ const Grid = ({ photos, onDelete }) => {
         {photos.map(({ photo, _id }) => (
           <div key={_id} className="grid__item">
             <img
-              src={`http://localhost:5000/uploads/${photo}`}
+              src={`http://13.48.84.96:5000/uploads/${photo}`}
               alt="grid_image"
               className="grid__image"
             />

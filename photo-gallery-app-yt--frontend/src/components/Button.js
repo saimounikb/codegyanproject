@@ -10,7 +10,7 @@ const Button = ({ setUpdateUI }) => {
     formData.append("photo", e.target.files[0]);
 
     axios
-      .post("http://localhost:5000/api/save", formData)
+      .post("http://13.48.84.96:5000/api/save", formData)
       .then((res) => {
         console.log(res.data);
         setUpdateUI(res.data._id);
@@ -21,7 +21,7 @@ const Button = ({ setUpdateUI }) => {
     console.log("Deleting photo with ID:", photoId);
     // Make a DELETE request to delete the photo
     axios
-      .delete(`http://localhost:5000/api/delete/${photoId}`)
+      .delete(`http://13.48.84.96:5000/api/delete/${photoId}`)
       .then((res) => {
         console.log(res.data);
         // Refresh the photo gallery after deletion

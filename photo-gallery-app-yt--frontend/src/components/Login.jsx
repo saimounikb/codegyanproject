@@ -18,7 +18,7 @@ const Login = ({ setToken }) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/login", formData)
+      .post("http://13.48.84.96:5000/api/login", formData)
       .then((response) => {
         // Handle successful login
         console.log("Login successful", response.data);

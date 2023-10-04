@@ -16,7 +16,7 @@ const Register = ({ setToken }) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/register", formData)
+      .post("http://13.48.84.96:5000/api/register", formData)
       .then((response) => {
         // Handle successful registration
         console.log("Registration successful", response.data);

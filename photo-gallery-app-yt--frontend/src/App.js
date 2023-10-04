@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/get")
+      .get("http://13.48.84.96:5000/api/get")
       .then((res) => {
         console.log(res.data);
         setPhotos(res.data);
@@ -37,7 +37,7 @@ function App() {
     console.log("Deleting photo with ID:", photoId);
     // Make a DELETE request to delete the photo
     axios
-      .delete(`http://localhost:5000/api/delete/${photoId}`)
+      .delete(`http://13.48.84.96:5000/api/delete/${photoId}`)
       .then((res) => {
         console.log(res.data);
         // Refresh the photo gallery after deletion
